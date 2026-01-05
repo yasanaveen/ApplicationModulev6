@@ -21,12 +21,36 @@ public class UpdateScreenObjects {
     @FindBy(xpath = "(//*[text()='Update'])[1]")
     WebElement updateBtn;
 
+    @FindBy(xpath = "//*[text()='Update Distribution to DGM']")
+    WebElement updateDistributionToDGMText;
+
+    @FindBy(xpath = "//*[text()='Select Issued To']")
+    WebElement issuedToDropdown;
+    @FindBy(xpath = "//*[text()='Sandhya Rani']")
+    WebElement selectIssuedToOption;
+
     @FindBy(xpath = "(//*[contains(@class,'button__BMIDC ')])[6]")
     WebElement applicationFeefield;
+
+    @FindBy(xpath = "//*[text()='Update']")
+    WebElement clkUpdateBtn;
+
+    @FindBy(xpath = "(//*[@id='mobileNumber'])[2]")
+    WebElement mobileNumber;
 
 
     public void clkUpdateBtn() {
         updateBtn.click();
+    }
+
+    public String validateText() {
+        return updateDistributionToDGMText.getText();
+    }
+
+    public void issuedTodpDown() {
+        //issuedToDropdown.click();
+        waitutil.waitForClickable(issuedToDropdown).click();
+        selectIssuedToOption.click();
     }
 
     public boolean applicatinFeefield() {
@@ -38,6 +62,15 @@ public class UpdateScreenObjects {
             return false;
         }
 
+    }
+
+    public String validateMobileNumber() {
+       // return mobileNumber.getText().trim();
+        return mobileNumber.getAttribute("value");
+    }
+
+    public void clkUpdateBtnn() {
+        clkUpdateBtn.click();
     }
 
 

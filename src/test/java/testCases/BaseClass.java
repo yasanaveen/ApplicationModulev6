@@ -30,7 +30,7 @@ public class BaseClass {
 
 
         driver = new ChromeDriver();
-        log.info("Chromw browser opened...");
+        log.info("Chrome browser opened...");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get(prop.getProperty("url"));
