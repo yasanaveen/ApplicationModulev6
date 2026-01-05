@@ -2,6 +2,7 @@ package utils;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -31,6 +32,7 @@ public class WaitUtill {
 	public boolean waitForText(WebElement element, String text) {
 		return wait.until(ExpectedConditions.textToBePresentInElement(element, text));
 	}
+
 
 	// Wait for element attribute to be not empty
 	public boolean waitForAttributeNotEmpty(WebElement element, String attribute) {

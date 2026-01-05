@@ -31,7 +31,8 @@ public class UpdateScreenObjects {
 
     public boolean applicatinFeefield() {
         try {
-            waitutil.waitForClickable(applicationFeefield).click();
+            waitutil.waitForClickable(applicationFeefield);
+            // waitutil.waitForElementToBeInvisible(applicationFeefield).
             return true;
         } catch (TimeoutException e) {
             return false;
