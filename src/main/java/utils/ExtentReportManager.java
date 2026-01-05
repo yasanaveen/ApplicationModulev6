@@ -21,82 +21,82 @@
 //import com.aventstack.extentreports.reporter.configuration.Theme;
 //
 //public class ExtentReportManager implements ITestListener {
-//	public ExtentSparkReporter sparkReporter;
-//	public ExtentReports extent;
-//	public ExtentTest test;
+//    public ExtentSparkReporter sparkReporter;
+//    public ExtentReports extent;
+//    public ExtentTest test;
 //
-//	String repName;
+//    String repName;
 //
-//	public void onStart(ITestContext testContext) {
+//    public void onStart(ITestContext testContext) {
 //
 //		/*SimpleDateFormat df=new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
 //		Date dt=new Date();
 //		String currentdatetimestamp=df.format(dt);
 //		*/
 //
-//		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// time stamp
-//		repName = "Test-Report-" + timeStamp + ".html";
-//		sparkReporter = new ExtentSparkReporter(".\\reports\\" + repName);// specify location of the report
+//        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// time stamp
+//        repName = "Test-Report-" + timeStamp + ".html";
+//        sparkReporter = new ExtentSparkReporter(".\\reports\\" + repName);// specify location of the report
 //
-//		sparkReporter.config().setDocumentTitle("Scaits Reengineering"); // Title of report
-//		sparkReporter.config().setReportName("ApplicationModule Functional Testing"); // name of the report
-//		sparkReporter.config().setTheme(Theme.DARK);
+//        sparkReporter.config().setDocumentTitle("OHRM Automation Report"); // Title of report
+//        sparkReporter.config().setReportName("OrangeHRM Functional Testing"); // name of the report
+//        sparkReporter.config().setTheme(Theme.DARK);
 //
-//		extent = new ExtentReports();
-//		extent.attachReporter(sparkReporter);
-//		extent.setSystemInfo("Application", "SCAITS");
-//		extent.setSystemInfo("Module", "ApplicationModule");
-//		extent.setSystemInfo("Sub Module", "DISTRIBUTION TO DGM");
-//		extent.setSystemInfo("User Name", System.getProperty("user.name"));
-//		extent.setSystemInfo("Environemnt", "QA");
+//        extent = new ExtentReports();
+//        extent.attachReporter(sparkReporter);
+//        extent.setSystemInfo("Application", "Applicaton Module");
+//        extent.setSystemInfo("Module", "Login");
+//        extent.setSystemInfo("Sub Module", "PIM");
+//        extent.setSystemInfo("User Name", System.getProperty("user.name"));
+//        extent.setSystemInfo("Environemnt", "QA");
 //
-//		String os = testContext.getCurrentXmlTest().getParameter("os");
-//		extent.setSystemInfo("Operating System", os);
+//        String os = testContext.getCurrentXmlTest().getParameter("os");
+//        extent.setSystemInfo("Operating System", os);
 //
-//		String browser = testContext.getCurrentXmlTest().getParameter("browser");
-//		extent.setSystemInfo("Browser", browser);
+//        String browser = testContext.getCurrentXmlTest().getParameter("browser");
+//        extent.setSystemInfo("Browser", browser);
 //
-//		List<String> includedGroups = testContext.getCurrentXmlTest().getIncludedGroups();
-//		if(!includedGroups.isEmpty()) {
-//		extent.setSystemInfo("Groups", includedGroups.toString());
-//		}
-//	}
+//        List<String> includedGroups = testContext.getCurrentXmlTest().getIncludedGroups();
+//        if(!includedGroups.isEmpty()) {
+//            extent.setSystemInfo("Groups", includedGroups.toString());
+//        }
+//    }
 //
-//	public void onTestSuccess(ITestResult result) {
+//    public void onTestSuccess(ITestResult result) {
 //
-//		test = extent.createTest(result.getTestClass().getName());
-//		test.assignCategory(result.getMethod().getGroups()); // to display groups in report
-//		test.log(Status.PASS,result.getName()+" got successfully executed");
+//        test = extent.createTest(result.getTestClass().getName());
+//        test.assignCategory(result.getMethod().getGroups()); // to display groups in report
+//        test.log(Status.PASS,result.getName()+" got successfully executed");
 //
-//	}
+//    }
 //
-//	public void onTestFailure(ITestResult result) {
-//		test = extent.createTest(result.getTestClass().getName());
-//		test.assignCategory(result.getMethod().getGroups());
+//    public void onTestFailure(ITestResult result) {
+//        test = extent.createTest(result.getTestClass().getName());
+//        test.assignCategory(result.getMethod().getGroups());
 //
-//		test.log(Status.FAIL,result.getName()+" got failed");
-//		test.log(Status.INFO, result.getThrowable().getMessage());
-//	}
+//        test.log(Status.FAIL,result.getName()+" got failed");
+//        test.log(Status.INFO, result.getThrowable().getMessage());
+//    }
 //
-//	public void onTestSkipped(ITestResult result) {
-//		test = extent.createTest(result.getTestClass().getName());
-//		test.assignCategory(result.getMethod().getGroups());
-//		test.log(Status.SKIP, result.getName()+" got skipped");
-//		test.log(Status.INFO, result.getThrowable().getMessage());
-//	}
+//    public void onTestSkipped(ITestResult result) {
+//        test = extent.createTest(result.getTestClass().getName());
+//        test.assignCategory(result.getMethod().getGroups());
+//        test.log(Status.SKIP, result.getName()+" got skipped");
+//        test.log(Status.INFO, result.getThrowable().getMessage());
+//    }
 //
-//	public void onFinish(ITestContext testContext) {
+//    public void onFinish(ITestContext testContext) {
 //
-//		extent.flush();
+//        extent.flush();
 //
-//		String pathOfExtentReport = System.getProperty("user.dir")+"\\reports\\"+repName;
-//		File extentReport = new File(pathOfExtentReport);
+//        String pathOfExtentReport = System.getProperty("user.dir")+"\\reports\\"+repName;
+//        File extentReport = new File(pathOfExtentReport);
 //
-//		try {
-//			Desktop.getDesktop().browse(extentReport.toURI());
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+//        try {
+//            Desktop.getDesktop().browse(extentReport.toURI());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 //
 //
 //		/*  try {
@@ -122,6 +122,6 @@
 //			  }
 //		 */
 //
-//	}
+//    }
 //
 //}
