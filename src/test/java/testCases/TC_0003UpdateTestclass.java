@@ -10,7 +10,7 @@ import pageObjects.UpdateScreenObjects;
 public class TC_0003UpdateTestclass extends BaseClass {
 
     @Test
-    public void updateTest() {
+    public void updateTest() throws InterruptedException {
 
         LoginPageObjects lg = new LoginPageObjects(driver);
         lg.sendUsernameAndPassword(prop.getProperty("username"), prop.getProperty("password"));
@@ -31,7 +31,12 @@ public class TC_0003UpdateTestclass extends BaseClass {
         Assert.assertEquals(actualText, expectedText, "text missMatched...");
         log.info("text is matched...");
 
-        //up.issuedTodpDown();
+        up.cityDpDown("HYDERABAD");
+        Thread.sleep(1000);
+        up.zoneDpdown("NALLAKUNTA");
+        up.selectBranch();
+
+        up.issuedTodpDown();
 
         //SoftAssert softAssert = new SoftAssert();
 
@@ -49,6 +54,9 @@ public class TC_0003UpdateTestclass extends BaseClass {
         Assert.assertEquals(actualMobileNumber, expectedMobilenumber, "mobile number missmatched..");
         log.info("mobile number matched...");
         // up.clkUpdateBtnn();
+
+
+        log.info("*************TC_003 completed***************");
 
 
     }

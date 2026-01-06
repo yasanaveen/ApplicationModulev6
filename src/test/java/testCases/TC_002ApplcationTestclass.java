@@ -45,7 +45,7 @@ public class TC_002ApplcationTestclass extends BaseClass {
 
         ap.getDateFieldValue();
         log.info("entered all the fields...");
-        //ap.clkInsertBtn();
+        ap.clkInsertBtn();
         log.info("clicked on insert button");
         log.info("**************** completed  Tc_002 application module************");
 

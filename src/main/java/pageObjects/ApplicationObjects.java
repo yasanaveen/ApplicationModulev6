@@ -130,11 +130,9 @@ public class ApplicationObjects {
     }
 
 
-
-  public void enterRangeField(String range)
-  {
-      rangeField.sendKeys(range);
-  }
+    public void enterRangeField(String range) {
+        rangeField.sendKeys(range);
+    }
 
     public boolean validateRangeNotExceedApplicationCount(String rangeValue) {
 
@@ -154,7 +152,6 @@ public class ApplicationObjects {
         // Validation: range must not exceed application count
         return actualRangeValue <= applicationCount;
     }
-
 
 
     public void getDateFieldValue() {

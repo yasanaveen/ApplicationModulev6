@@ -24,9 +24,32 @@ public class UpdateScreenObjects {
     @FindBy(xpath = "//*[text()='Update Distribution to DGM']")
     WebElement updateDistributionToDGMText;
 
-    @FindBy(xpath = "//*[text()='Select Issued To']")
+    @FindBy(xpath = "(//*[contains(@class,'button__BMIDC ')])[9]")
+    WebElement cityNamedpDown;
+
+    @FindBy(xpath = "//*[contains(@class,'Searchbox_rectangle__A1jP6')]")
+    WebElement searchCityNameInputField;
+
+    @FindBy(xpath = "//*[text()='HYDERABAD']")
+    WebElement selectCityNameOption;
+
+    @FindBy(xpath = "(//*[contains(@class,'button__BMIDC ')])[10]")
+    WebElement zoneNamedpdown;
+    @FindBy(xpath = "//*[contains(@placeholder,'Search Zone Name')]")
+    WebElement zoneSearchInput;
+    @FindBy(xpath = "//*[text()='NALLAKUNTA']")
+    WebElement selectZoneOption;
+
+    @FindBy(xpath = "(//*[contains(@class,'button__BMIDC ')])[11]")
+    WebElement branchDpdown;
+
+    @FindBy(xpath = "//*[text()='NALLAKUNTA IPL']")
+    WebElement selectBranch;
+
+    @FindBy(xpath = "(//*[contains(@class,'button__BMIDC ')])[12]")
     WebElement issuedToDropdown;
-    @FindBy(xpath = "//*[text()='Sandhya Rani']")
+
+    @FindBy(xpath = "//*[text()='Harika Narsaraopet']")
     WebElement selectIssuedToOption;
 
     @FindBy(xpath = "(//*[contains(@class,'button__BMIDC ')])[6]")
@@ -47,6 +70,25 @@ public class UpdateScreenObjects {
         return updateDistributionToDGMText.getText();
     }
 
+    public void cityDpDown(String city) {
+        cityNamedpDown.click();
+        searchCityNameInputField.sendKeys(city);
+        selectCityNameOption.click();
+    }
+
+    public void zoneDpdown(String zoneName) {
+        zoneNamedpdown.click();
+        zoneSearchInput.sendKeys(zoneName);
+        selectZoneOption.click();
+
+    }
+
+    public void selectBranch()
+    {
+        branchDpdown.click();
+        selectBranch.click();
+    }
+
     public void issuedTodpDown() {
         //issuedToDropdown.click();
         waitutil.waitForClickable(issuedToDropdown).click();
@@ -65,7 +107,7 @@ public class UpdateScreenObjects {
     }
 
     public String validateMobileNumber() {
-       // return mobileNumber.getText().trim();
+        // return mobileNumber.getText().trim();
         return mobileNumber.getAttribute("value");
     }
 
