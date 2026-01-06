@@ -27,6 +27,12 @@ public class LoginPageObjects {
     @FindBy(xpath = "//*[text()='Login']")
     WebElement lgnBtn;
 
+    @FindBy(xpath = "//*[contains(@class,'userinfo__4jz2b')]")
+    WebElement clkprofile;
+
+    @FindBy(xpath = "//*[text()='Sign out']")
+    WebElement clkSigntoutbtn;
+
     public void sendUsernameAndPassword(String uName, String password) {
         inputEmail.sendKeys(uName);
         inputPassword.sendKeys(password);
@@ -35,6 +41,12 @@ public class LoginPageObjects {
 
     public String validateUrl() {
         return driver.getCurrentUrl();
+    }
+
+    public void clickProfile()
+    {
+        clkprofile.click();
+        clkSigntoutbtn.click();
     }
 
 
