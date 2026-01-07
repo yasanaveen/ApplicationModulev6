@@ -23,6 +23,8 @@ public class TC_002ApplcationTestclass extends BaseClass {
         String expectedApplcationurl = "http://192.168.20.19:8081/scopes/application/analytics";
         Assert.assertEquals(actualapplicaionUrl, expectedApplcationurl, "applicationURL missmatched");
         ap.clkDistribute();
+
+
         log.info("clicked on distributed tab...");
         boolean text = ap.textIsdisplayed();
         System.out.println("The text is displayed:-" + text);

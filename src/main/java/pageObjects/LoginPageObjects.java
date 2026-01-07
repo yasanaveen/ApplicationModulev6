@@ -43,8 +43,7 @@ public class LoginPageObjects {
         return driver.getCurrentUrl();
     }
 
-    public void clickProfile()
-    {
+    public void clickProfile() {
         clkprofile.click();
         clkSigntoutbtn.click();
     }

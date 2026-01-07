@@ -83,9 +83,11 @@ public class ApplicationObjects {
         return driver.getCurrentUrl();
     }
 
+
     public void clkDistribute() {
         btnDistribute.click();
     }
+
 
     public boolean textIsdisplayed() {
         return distributeApplicaionstext.isDisplayed();
