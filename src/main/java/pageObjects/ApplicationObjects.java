@@ -27,7 +27,7 @@ public class ApplicationObjects {
     @FindBy(xpath = "//*[text()='Distribute Applications']")
     WebElement distributeApplicaionstext;
 
-    @FindBy(xpath = "(//*[contains(@class,'button__BMIDC ')])[2]")
+    @FindBy(xpath = "//*[text()='Select City Name']")
     WebElement cityNamedpdown;
     @FindBy(xpath = "//*[text()='Select City Name']")
     WebElement cityNamesearcInput;
