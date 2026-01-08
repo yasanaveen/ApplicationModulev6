@@ -1,6 +1,10 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="testsuite">
 
+    <listeners>
+        <listener class-name="utils.ExtentReportManager"/>
+    </listeners>
+
     <test name="applicationModule">
         <classes>
             <class name="testCases.TC_0001LoginPage"/>

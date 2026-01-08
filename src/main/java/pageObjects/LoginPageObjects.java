@@ -27,7 +27,7 @@ public class LoginPageObjects {
     @FindBy(xpath = "//*[text()='Login']")
     WebElement lgnBtn;
 
-    @FindBy(xpath = "//*[contains(@class,'userinfo__4jz2b')]")
+    @FindBy(xpath = "//*[contains(@class,'userinfo__siycp')]")
     WebElement clkprofile;
 
     @FindBy(xpath = "//*[text()='Sign out']")
