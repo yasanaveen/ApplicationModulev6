@@ -31,6 +31,15 @@ public class TC_0003UpdateTestclass extends BaseClass {
         Assert.assertEquals(actualText, expectedText, "text missMatched...");
         log.info("text is matched...");
 
+        boolean isclickable = up.acadamicYeardown();
+        if (isclickable) {
+            log.error("academic year field is clickable ");
+            Assert.fail("Academic year field should not be clickable at update page..");
+        } else {
+            log.info("Academic year field is not clickable");
+            Assert.assertTrue(true, "Application field not clickable...");
+        }
+
         up.cityDpDown("HYDERABAD");
         Thread.sleep(1000);
         up.zoneDpdown("NALLAKUNTA");

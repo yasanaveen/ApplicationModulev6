@@ -22,13 +22,10 @@ public class TC_0001LoginPage extends BaseClass {
 
         lg.clickProfile();
         log.info("clicked on profile section and signout....");
-
         log.info("**************** completed  Tc_001 Login page************");
 
 
     }
-
-
 
 
 }

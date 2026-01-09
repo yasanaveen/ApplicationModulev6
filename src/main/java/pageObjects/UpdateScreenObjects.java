@@ -24,7 +24,10 @@ public class UpdateScreenObjects {
     @FindBy(xpath = "//*[text()='Update Distribution to DGM']")
     WebElement updateDistributionToDGMText;
 
-    @FindBy(xpath = "(//*[contains(@class,'button__BMIDC ')])[9]")
+    @FindBy(xpath = "(//*[contains(@class,'button__wVZQQ ')])[8]")
+    WebElement academicYeardpDown;
+
+    @FindBy(xpath = "(//*[contains(@class,'button__wVZQQ ')])[9]")
     WebElement cityNamedpDown;
 
     @FindBy(xpath = "//*[contains(@class,'Searchbox_rectangle__A1jP6')]")
@@ -70,6 +73,16 @@ public class UpdateScreenObjects {
         return updateDistributionToDGMText.getText();
     }
 
+    public boolean acadamicYeardown() {
+        try {
+            waitutil.waitForClickable(academicYeardpDown).click();
+            return true;
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
+
+
     public void cityDpDown(String city) {
         cityNamedpDown.click();
         searchCityNameInputField.sendKeys(city);
@@ -83,8 +96,7 @@ public class UpdateScreenObjects {
 
     }
 
-    public void selectBranch()
-    {
+    public void selectBranch() {
         branchDpdown.click();
         selectBranch.click();
     }
