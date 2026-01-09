@@ -5,11 +5,11 @@ import org.testng.annotations.Test;
 import pageObjects.ApplicationObjects;
 import pageObjects.LoginPageObjects;
 
-public class TC_002ApplcationTestclass extends BaseClass {
+public class TC002ApplicationTestCase extends BaseClass {
 
 
     @Test
-    public void applicationTestclass() throws InterruptedException {
+    public void applicationTestClass() throws InterruptedException {
 
         LoginPageObjects lg = new LoginPageObjects(driver);
         lg.sendUsernameAndPassword(prop.getProperty("username"), prop.getProperty("password"));

@@ -7,9 +7,9 @@
     <parameter name="browser" value="chrome"/>
     <test name="applicationModule">
         <classes>
-            <class name="testCases.TC_0001LoginPage"/>
-            <!--            <class name="testCases.TC_002ApplcationTestclass"/>-->
-            <!--            <class name="testCases.TC_0003UpdateTestclass"/>-->
+            <class name="testCases.TC0001LoginPage"/>
+            <!--            <class name="testCases.TC002ApplicationTestCase"/>-->
+            <!--            <class name="testCases.TC0003UpdateTestCase"/>-->
         </classes>
     </test>
 </suite>

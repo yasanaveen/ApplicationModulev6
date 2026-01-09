@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.LoginPageObjects;
 
-public class TC_0001LoginPage extends BaseClass {
+public class TC0001LoginPage extends BaseClass {
 
 
     @Test(priority = 1)

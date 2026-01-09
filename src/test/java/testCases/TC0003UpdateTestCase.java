@@ -7,7 +7,9 @@ import pageObjects.ApplicationObjects;
 import pageObjects.LoginPageObjects;
 import pageObjects.UpdateScreenObjects;
 
-public class TC_0003UpdateTestclass extends BaseClass {
+import static utils.ScreenShot.takeScreenshot;
+
+public class TC0003UpdateTestCase extends BaseClass {
 
     @Test
     public void updateTest() throws InterruptedException {
@@ -34,6 +36,7 @@ public class TC_0003UpdateTestclass extends BaseClass {
         boolean isclickable = up.acadamicYeardown();
         if (isclickable) {
             log.error("academic year field is clickable ");
+            takeScreenshot(driver, "AcademicYearClickable..");
             Assert.fail("Academic year field should not be clickable at update page..");
         } else {
             log.info("Academic year field is not clickable");
