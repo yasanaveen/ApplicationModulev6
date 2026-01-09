@@ -4,7 +4,7 @@
     <listeners>
         <listener class-name="utils.ExtentReportManager"/>
     </listeners>
-
+    <parameter name="browser" value="chrome"/>
     <test name="applicationModule">
         <classes>
             <class name="testCases.TC_0001LoginPage"/>

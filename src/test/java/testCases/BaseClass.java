@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import java.io.FileInputStream;
@@ -25,7 +26,7 @@ public class BaseClass {
 
     @Parameters("browser")
     @BeforeClass
-    public void setUp(String browser) throws IOException {
+    public void setUp(@Optional("chrome")String browser) throws IOException {
         prop = new Properties();
         file = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/application.properties");
         prop.load(file);
