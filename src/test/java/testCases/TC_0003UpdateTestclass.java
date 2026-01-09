@@ -26,7 +26,7 @@ public class TC_0003UpdateTestclass extends BaseClass {
         up.clkUpdateBtn();
         log.info("clicked on update button...");
 
-        String expectedText = "Update Distribution to DGM";
+        String expectedText = "Update Distribution To DGM";
         String actualText = up.validateText();
         Assert.assertEquals(actualText, expectedText, "text missMatched...");
         log.info("text is matched...");

@@ -21,7 +21,7 @@ public class UpdateScreenObjects {
     @FindBy(xpath = "(//*[text()='Update'])[1]")
     WebElement updateBtn;
 
-    @FindBy(xpath = "//*[text()='Update Distribution to DGM']")
+    @FindBy(xpath = "//*[text()='Update Distribution To DGM']")
     WebElement updateDistributionToDGMText;
 
     @FindBy(xpath = "(//*[contains(@class,'button__wVZQQ ')])[8]")
