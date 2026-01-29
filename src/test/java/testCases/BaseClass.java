@@ -1,5 +1,4 @@
 package testCases;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -26,7 +25,7 @@ public class BaseClass {
 
     @Parameters("browser")
     @BeforeClass
-    public void setUp(@Optional("chrome")String browser) throws IOException {
+    public void setUp(@Optional("chrome") String browser) throws IOException {
         prop = new Properties();
         file = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/application.properties");
         prop.load(file);
@@ -50,7 +49,6 @@ public class BaseClass {
         log.info("applicaton url is opened....");
 
     }
-
 
     @AfterClass
     public void tearDown() {

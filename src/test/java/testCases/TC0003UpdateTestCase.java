@@ -35,14 +35,13 @@ public class TC0003UpdateTestCase extends BaseClass {
 
         boolean isclickable = up.acadamicYeardown();
         if (isclickable) {
-            log.error("academic year field is clickable ");
+            log.error("academic year field is clickable the test was failed.. ");
             takeScreenshot(driver, "AcademicYearClickable..");
             Assert.fail("Academic year field should not be clickable at update page..");
         } else {
             log.info("Academic year field is not clickable");
             Assert.assertTrue(true, "Application field not clickable...");
         }
-
         up.cityDpDown("HYDERABAD");
         Thread.sleep(1000);
         up.zoneDpdown("NALLAKUNTA");
@@ -66,7 +65,6 @@ public class TC0003UpdateTestCase extends BaseClass {
         Assert.assertEquals(actualMobileNumber, expectedMobilenumber, "mobile number missmatched..");
         log.info("mobile number matched...");
         // up.clkUpdateBtnn();
-
 
         log.info("*************TC_003 completed***************");
 

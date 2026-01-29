@@ -8,8 +8,8 @@
     <test name="applicationModule">
         <classes>
             <class name="testCases.TC0001LoginPage"/>
-            <!--            <class name="testCases.TC002ApplicationTestCase"/>-->
-            <!--            <class name="testCases.TC0003UpdateTestCase"/>-->
+            <!--  <class name="testCases.TC002ApplicationTestCase"/>-->
+            <!--  <class name="testCases.TC0003UpdateTestCase"/>-->
         </classes>
     </test>
 </suite>
